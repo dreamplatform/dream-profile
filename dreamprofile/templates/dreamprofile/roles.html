@@ -1,0 +1,53 @@
+{% extends "dreamprofile/base.html" %}
+{% load i18n %}
+{% block content %}
+<form method="post">
+  
+  <div id="header">
+    <div class="wrap">
+      <div class="icon"></div>
+      <h1 class="title">{% trans "Manage Roles" %}</h1>
+    </div>
+    <a class="back-link" href="{% url dreamprofile_main %}"><span></span></a>
+  </div>
+
+  <div id="content">
+    <div class="option-list">
+    {% if has_many_organisations %}
+    {% for field in form %}
+      <div class="option-list-item official{% if field.value %} active{% endif %} grouped">
+        <input type="checkbox" name="{{ field.html_name }}" id="{{ field.auto_id }}" disabled="disabled"{% if field.value %} checked="checked"{% endif %} />
+        <label for="{{ field.auto_id }}">
+          <span class="label-content">{{ field.label }}</span>
+          <span class="label-content-2">{{ field.field.object.organisation }}</span>
+          <span class="label-icon"></span>
+        </label>
+      </div>
+    {% endfor %}
+    {% else %}
+    {% for field in form %}
+      <div class="option-list-item official{% if field.value %} active{% endif %}">
+        <input type="checkbox" name="{{ field.html_name }}" id="{{ field.auto_id }}" disabled="disabled"{% if field.value %} checked="checked"{% endif %} />
+        <label for="{{ field.auto_id }}">
+          <span class="label-content">{{ field.label }}</span>
+          <span class="label-icon"></span>
+        </label>
+      </div>
+    {% endfor %}
+    {% endif %}
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="footer-container clearfix">
+
+      <div class="copyright">
+        <p class="row">{% trans '#copyright' %}</p>
+        <p class="row">{% trans 'Made by Haltu Oy' %}</p>
+      </div>
+
+    </div>
+  </div>
+
+</form>
+{% endblock %}

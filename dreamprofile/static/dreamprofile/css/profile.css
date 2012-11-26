@@ -1,0 +1,722 @@
+
+/* Base typography & colors
+======================================================== */
+
+html {
+  background: #fff;
+}
+body, input, textarea, select, button {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #063145;
+}
+
+/* Headings
+-------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+.mod-fontface h1, .mod-fontface h2, .mod-fontface h3, .mod-fontface h4, .mod-fontface h5, .mod-fontface h6 {
+  font-weight: 600;
+}
+
+/* Links
+-------------------------------------------------------- */
+
+a { 
+  color: #3b8dc0;
+  text-decoration: none;
+}
+a:hover {
+  color: #3b8dc0;
+  text-decoration: underline;
+}
+
+/* Placeholders
+-------------------------------------------------------- */
+
+::-webkit-input-placeholder {
+    color: #B0B0B0 !important;
+    font-style: italic !important;
+}
+:-moz-placeholder {
+    color: #B0B0B0 !important;
+    font-style: italic !important;
+}
+
+/* Misc
+-------------------------------------------------------- */
+
+b, strong {
+  font-weight: bold;
+}
+.mod-fontface b, .mod-fontface strong {
+  font-weight: 600;
+}
+i, em {
+  font-style: italic;
+}
+small {
+  font-size: 85%;
+}
+ins {
+  text-decoration: none;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* Layout & Elements
+======================================================== */
+
+/*========================================================
+  Main page
+========================================================*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+#page {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+#page > form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/*========================================================
+  Header
+========================================================*/
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+#header .wrap {
+  position: relative;
+  height: 30px;
+  padding: 10px;
+  margin-right: 50px;
+  background: #063145;
+}
+#header.no-back .wrap {
+  margin-right: 0px;
+}
+#header .icon {
+  position: absolute;
+  display: block;
+  left: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  background: transparent url(/static/dreamprofile/img/icon-settings.png) no-repeat center center;
+}
+#header .title {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 40px;
+  color: #53AADF;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mod-fontface #header .title {
+  font-weight: 600;
+}
+#header .back-link {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  margin-top: -25px;
+  width: 49px;
+  height: 50px;
+  border-left: 1px solid #051b24;
+  background-color: #063145;
+  background-image: url(/static/dreamprofile/img/icon-back.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#header .back-link span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid #15445b;
+}
+#header .back-link:hover {
+  background-color: #084460;
+}
+#header .back-link:hover span {
+  border-color: #0b597d;
+}
+
+/*========================================================
+  Footer
+========================================================*/
+
+/* Wrappers */
+
+#footer {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  background: #f1f1f1;
+}
+.footer-container {
+  position: relative;
+  padding: 9px 20px;
+  height: 32px;
+}
+
+/* Copyright */
+
+.copyright {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  height: 32px;
+  margin-top: -16px;
+}
+.copyright p {
+  float: right;
+  height: 32px;
+  line-height: 32px;
+  font-size: 11px;
+  color: #999;
+  text-align: right;
+  clear: right;
+}
+.copyright p.row {
+  height: 16px;
+  line-height: 16px;
+}
+
+/*========================================================
+  Content
+========================================================*/
+
+#content {
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+#content.no-footer {
+  bottom: 0px;
+}
+
+/*========================================================
+  Intro Links
+========================================================*/
+
+.intro-links {
+  padding: 20px;
+}
+.intro-links a {
+  position: relative;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #d3d7d9;
+  color: #0c202d;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+}
+.mod-fontface .intro-links a {
+  font-weight: 600;
+}
+.intro-links a span {
+  display: none;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  margin-top: -5px;
+  border-left: 5px solid #3a95cf;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.intro-links a:hover {
+  color: #3a95cf;
+}
+.intro-links a:hover span {
+  display: block;
+}
+
+/*========================================================
+  Content - Avatar Form
+========================================================*/
+
+#avatar-preview {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.avatar-form {
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: 130px;
+  right: 0;
+}
+
+/*========================================================
+  Content - Auth Provider Form
+========================================================*/
+
+.associate-form {
+  padding: 20px;
+}
+.associate-form p {
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+.associate-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #d3d7d9;
+}
+.associate-form li {
+  padding: 0;
+  margin: 0;
+}
+.associate-form li .item {
+  position: relative;
+  display: block;
+  padding: 15px 10px 15px 50px;
+  border-bottom: 1px solid #d3d7d9;
+  text-decoration: none;
+  cursor: pointer;
+  color: #063145;
+}
+.associate-form li .item:hover {
+  background: #e3e8eb;
+}
+.associate-form li .item .icon {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+}
+.associate-form li .item .icon img {
+  display: block;
+  max-width: 100%;
+}
+.associate-form li .item .separator {
+  color: #c0c0c0;
+}
+.associate-form li .item .association {
+  color: #ff0000;
+}
+.associate-form li.active .item .association {
+  color: #3c9719;
+}
+.associate-form li.active .item:hover {
+  background: #fff;
+  cursor: default;
+}
+
+/*========================================================
+  Content - Option Forms
+========================================================*/
+
+/* Desc */
+
+.option-list-description {
+  padding: 20px 20px 0 20px;
+  font-style: italic;
+}
+
+/* Base styles */
+
+.option-list {
+  padding: 20px;
+}
+.option-list-item {
+  position: relative;
+}
+.option-list-item input {
+  display: none;
+}
+.option-list-item label {
+  display: block;
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  border-bottom: 1px solid #d3d7d9;
+  cursor: pointer;
+}
+.option-list-item:first-child label {
+  border-top: 1px solid #d3d7d9;
+}
+.option-list-item .label-content,
+.option-list-item .label-content-2 {
+  display: block;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.option-list-item.grouped .label-content {
+  height: 18px;
+  line-height: 18px;
+}
+.option-list-item.grouped .label-content-2 {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #b0b9be;
+}
+.option-list-item .label-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -15px;
+  background-repeat: no-repeat;
+  background-image: url(/static/dreamprofile/img/icon-checkbox.png);
+}
+
+/* Hover state */
+
+.option-list-item label:hover {
+  background-color: #e3e8eb;
+}
+.option-list-item label:hover .label-icon {
+  display: block;
+  background-position: 0 -30px;
+}
+
+/* Selected & selected hover state */
+
+.option-list-item.selected label,
+.option-list-item.selected label:hover {
+  background-color: #67a31e;
+}
+.option-list-item.selected label .label-icon,
+.option-list-item.selected label:hover .label-icon {
+  display: block;
+  background-position: 0 0px;
+}
+.option-list-item.selected label .label-content,
+.option-list-item.selected label:hover .label-content,
+.option-list-item.selected label .label-content-2,
+.option-list-item.selected label:hover .label-content-2 {
+  color: #fff;
+}
+
+/* Active state */
+
+.option-list-item.active label {
+  background-color: transparent;
+}
+.option-list-item.active label .label-icon {
+  display: block;
+  background-position: 0 -60px;
+}
+.option-list-item.active label .label-content,
+.option-list-item.active label .label-content-2 {
+  color: #67a31e;
+}
+
+/* Active hover state */
+
+.option-list-item.active label:hover {
+  background-color: transparent;
+}
+.option-list-item.active label:hover .label-icon {
+  display: block;
+  background-position: 0 -150px;
+}
+.option-list-item.active label:hover .label-content,
+.option-list-item.active label:hover .label-content-2 {
+  color: #cb4121;
+}
+
+/* Active selected & active selected hover state */
+
+.option-list-item.active.selected label,
+.option-list-item.active.selected label:hover {
+  background-color: #cb4121;
+}
+.option-list-item.active.selected label .label-icon,
+.option-list-item.active.selected label:hover .label-icon {
+  display: block;
+  background-position: 0 -90px;
+}
+.option-list-item.active.selected label .label-content,
+.option-list-item.active.selected label:hover .label-content,
+.option-list-item.active.selected label:hover .label-content-2 {
+  color: #fff;
+}
+
+/* Official default state */
+
+.option-list-item.official label {
+  cursor: default;
+  background-color: transparent;
+}
+.option-list-item.official label .label-content,
+.option-list-item.official label .label-content:hover {
+  color: #8b9397;
+}
+.option-list-item.official label .label-icon,
+.option-list-item.official label:hover .label-icon {
+  display: none;
+}
+
+/* Official active state */
+
+.option-list-item.official.active label {
+  cursor: default;
+  background-color: transparent;
+}
+.option-list-item.official.active label .label-content,
+.option-list-item.official.active label .label-content:hover {
+  color: #8b9397;
+}
+.option-list-item.official.active label .label-icon,
+.option-list-item.official.active label:hover .label-icon {
+  display: block;
+  background-position: 0 -30px;
+}
+
+/*========================================================
+  Content - Basic Form
+========================================================*/
+
+.basic-form {
+  padding: 20px;
+}
+.basic-form .form-description {
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+.basic-form .field {
+  padding-bottom: 15px;
+}
+.basic-form label {
+  display: block;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 2px;
+}
+.mod-fontface .basic-form label {
+  font-weight: 600;
+}
+.basic-form input[type="text"],
+.basic-form input[type="password"],
+.basic-form textarea {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #e3e8eb;
+  background: #FFFFFF;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Prevent iPad from applying text-shadow */
+  -webkit-appearance: none;
+}
+.basic-form textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: none;
+}
+.basic-form input[type="text"]:focus,
+.basic-form input[type="text"]:active,
+.basic-form input[type="password"]:focus,
+.basic-form input[type="password"]:active,
+.basic-form textarea:focus,
+.basic-form textarea:active {
+  border-color: #3e8ec0;
+}
+.mod-rgba.mod-boxshadow .basic-form textarea:active,
+.mod-rgba.mod-boxshadow .basic-form textarea:focus,
+.mod-rgba.mod-boxshadow .basic-form input[type="text"]:active,
+.mod-rgba.mod-boxshadow .basic-form input[type="text"]:focus,
+.mod-rgba.mod-boxshadow .basic-form input[type="password"]:active,
+.mod-rgba.mod-boxshadow .basic-form input[type="password"]:focus {
+  -webkit-box-shadow:  0px 0px 5px 0px rgba(62, 142, 192, 0.5);
+  box-shadow:  0px 0px 5px 0px rgba(62, 142, 192, 0.5);
+}
+
+/* Disabled fields */
+
+.basic-form .field.disabled label {
+  cursor: default;
+}
+.basic-form .field.disabled input[type="text"],
+.basic-form .field.disabled input[type="password"],
+.basic-form .field.disabled textarea {
+  color: #8B9397;
+}
+.basic-form .field.disabled input[type="text"]:focus,
+.basic-form .field.disabled input[type="text"]:active,
+.basic-form .field.disabled input[type="password"]:focus,
+.basic-form .field.disabled input[type="password"]:active,
+.basic-form .field.disabled textarea:focus,
+.basic-form .field.disabled textarea:active {
+  border-color: #e3e8eb;
+}
+.mod-rgba.mod-boxshadow .basic-form .field.disabled textarea:active,
+.mod-rgba.mod-boxshadow .basic-form .field.disabled textarea:focus,
+.mod-rgba.mod-boxshadow .basic-form .field.disabled input[type="text"]:active,
+.mod-rgba.mod-boxshadow .basic-form .field.disabled input[type="text"]:focus,
+.mod-rgba.mod-boxshadow .basic-form .field.disabled input[type="password"]:active,
+.mod-rgba.mod-boxshadow .basic-form .field.disabled input[type="password"]:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Field error styles */
+
+.basic-form .field.error input[type="text"],
+.basic-form .field.error input[type="text"]:focus,
+.basic-form .field.error input[type="text"]:active,
+.basic-form .field.error input[type="password"],
+.basic-form .field.error input[type="password"]:focus,
+.basic-form .field.error input[type="password"]:active,
+.basic-form .field.error textarea,
+.basic-form .field.error textarea:focus,
+.basic-form .field.error textarea:active {
+  border-color: #ff0000;
+}
+.mod-rgba.mod-boxshadow .basic-form .field.error textarea:active,
+.mod-rgba.mod-boxshadow .basic-form .field.error textarea:focus,
+.mod-rgba.mod-boxshadow .basic-form .field.error input[type="text"]:active,
+.mod-rgba.mod-boxshadow .basic-form .field.error input[type="text"]:focus,
+.mod-rgba.mod-boxshadow .basic-form .field.error input[type="password"]:active,
+.mod-rgba.mod-boxshadow .basic-form .field.error input[type="password"]:focus {
+  -webkit-box-shadow:  0px 0px 5px 0px rgba(255, 0, 0, 0.5);
+  box-shadow:  0px 0px 5px 0px rgba(255, 0, 0, 0.5);
+}
+.basic-form .field-errors {
+  display: block;
+  padding-top: 4px;
+  font-size: 13px;
+  line-height: 17px;
+  color: #ff0000;
+}
+
+/* Form error/success messages */
+
+.basic-form .form-errors,
+.basic-form .form-success {
+  margin: 0 0 20px 0;
+  font-style: italic;
+  color: #ff0000;
+}
+.mod-fontface .basic-form .form-errors,
+.mod-fontface .basic-form .form-success {
+  font-weight: 600;
+}
+.basic-form .form-errors {
+  color: #ff0000;
+}
+.basic-form .form-success {
+  color: #77BB24;
+}
+
+/*========================================================
+  Content - Buttons
+========================================================*/
+
+.button-1, .button-2, .button-3,
+a.button-1, a.button-2, a.button-3,
+input.button-1, input.button-2, input.button-3 {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px 15px;
+  margin: 0 10px 0 0;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button-1:hover, .button-2:hover, .button-3:hover,
+a.button-1:hover, a.button-2:hover, a.button-3:hover,
+input.button-1:hover, input.button-2:hover, input.button-3:hover {
+  text-decoration: none;
+}
+.button-1, a.button-1, input.button-1 {
+  background-color: #67a31e;
+}
+.button-1:hover, a.button-1:hover, input.button-1:hover {
+  background-color: #74b822;
+}
+.button-1:focus, a.button-1:focus, input.button-1:focus,
+.button-1:active, a.button-1:active, input.button-1:active {
+  background-color: #558818;
+}
+.button-2, a.button-2, input.button-2 {
+  background-color: #8c989f;
+}
+.button-2:hover, a.button-2:hover, input.button-2:hover {
+  background-color: #99a7af;
+}
+.button-2:focus, a.button-2:focus, input.button-2:focus,
+.button-2:active, a.button-2:active, input.button-2:active {
+  background-color: #6f7d85;
+}
+.button-3, a.button-3, input.button-3 {
+  background-color: #cb4121;
+}
+.button-3:hover, a.button-3:hover, input.button-3:hover {
+  background-color: #de4724;
+}
+.button-3:focus, a.button-3:focus, input.button-3:focus,
+.button-3:active, a.button-3:active, input.button-3:active {
+  background-color: #af3113;
+}

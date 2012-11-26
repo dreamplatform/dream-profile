@@ -1,0 +1,36 @@
+{% extends "dreamprofile/base.html" %}
+{% load i18n %}
+{% block content %}
+
+  <div id="header" class="no-back">
+    <div class="wrap">
+      <div class="icon"></div>
+      <h1 class="title">{% trans "Account settings" %}</h1>
+    </div>
+  </div>
+
+  <div id="content">
+
+    <div class="intro-links">
+      <a href="{% url dreamprofile_avatar %}">{% trans "Profile picture" %}<span></span></a>
+      <a href="{% url dreamprofile_contact %}">{% trans "Contact details" %}<span></span></a>
+      <a href="{% url password_change %}">{% trans "Change password" %}<span></span></a>
+      <a href="{% url dreamschool_associate %}">{% trans "Authentication providers" %}<span></span></a>
+      <a href="{% url dreamprofile_groups %}">{% trans "Groups" %}<span></span></a>
+      <a href="{% url dreamprofile_roles %}">{% trans "Roles" %}<span></span></a>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <div class="footer-container clearfix">
+
+      <div class="copyright">
+        <p class="row">{% trans '#copyright' %}</p>
+        <p class="row">{% trans 'Made by Haltu Oy' %}</p>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,2 @@
+recursive-include dreamprofile/static *
+recursive-include dreamprofile/templates *
